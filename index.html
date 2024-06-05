@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex B. Conrad - Resume</title>
+    <style>
+        .about-content {
+            display: flex; /* Use flexbox to align image and text horizontally */
+            align-items: center; /* Align items vertically in the center */
+        }
+
+        .about-content img {
+            width: 150px; /* Adjust the width of the image */
+            height: auto;
+            margin-right: 20px; /* Add some space between the image and text */
+        }
+
+        /* General styling for the body */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Styling for the header section */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        /* Styling for header's h1 */
+        header h1 {
+            margin: 0;
+        }
+
+        /* Styling for header's paragraphs */
+        header p {
+            margin: 5px 0 20px;
+        }
+
+        /* Styling for navigation */
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        /* Styling for navigation list items */
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        /* Styling for navigation links */
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* Styling for the main content section */
+        main {
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        /* Styling for sections */
+        section {
+            margin-bottom: 20px;
+        }
+
+        /* Styling for section headings */
+        section h2 {
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+        }
+
+        /* Styling for job and school sections */
+        .job, .education-section {
+            margin-bottom: 15px;
+        }
+
+        /* Styling for company logos */
+        .company img {
+            width: 50px; /* Adjust this value for thumbnail size */
+            height: 50px;
+            margin-right: 10px;
+            vertical-align: middle;
+            float: left;
+        }
+
+        /* Styling for company logos */
+        .education-section img {
+            width: 75px; /* Adjust this value for thumbnail size */
+            height: auto;
+            margin-right: 10px;
+            vertical-align: middle;
+            float: left;
+        }
+        /* Styling for company paragraphs */
+        .company p {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+         /* Styling for footer */
+        footer {
+            text-align: center;
+            padding: 1px 0;
+            background-color: #333;
+            color: #fff;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        /* Styling for job sections */
+        .job {
+            clear: both;
+            margin-bottom: 20px;
+        }
+
+        /* Styling for images within job sections */
+        .job img {
+            width: 75px; /* Adjust this value for thumbnail size */
+            height: auto;
+            margin-right: 10px;
+            float: left;
+        }
+
+        /* Styling for company information within job sections */
+        .job .company {
+            margin-left: 60px; /* Ensures text doesn't overlap with logo */
+        }
+
+        /* Styling for job titles within job sections */
+        .job h3 {
+            margin-top: 0; /* Remove default margin for consistency */
+        }
+
+        /* Styling for company name within job sections */
+        .job .company-name {
+            font-weight: bold;
+        }
+
+        /* Styling for dates within job sections */
+        .job .dates {
+            font-style: italic;
+            margin-top: 5px; /* Adjust as needed */
+        }
+
+        /* Styling for responsibilities within job sections */ 
+        .job .responsibilities {
+            list-style-type: disc; /* Change list style as needed */
+            margin-top: 5px; /* Adjust as needed */
+        }
+
+        /* Styling for list items within job responsibilities */
+        .job .responsibilities li {
+            margin-bottom: 5px; /* Adjust as needed */
+        }
+
+        /* Styling for education sections */
+        .education-section {
+            clear: both;
+            margin-bottom: 20px;
+        }
+
+        /* Styling for logos within education sections */
+        .education-logo {
+            width: 75px; /* Set width for thumbnail size */
+            height: auto; /* Automatically adjust height */
+            margin-right: 10px; /* Set margin right */
+            float: left; /* Float the logo to the left */
+        }
+
+        /* Styling for school sections */
+        .education-section .school {
+            margin-left: 85px; /* Ensures text doesn't overlap with logo */
+        }
+
+        /* Styling for school sections */
+        .company {
+        margin-left: 85px; /* Ensures text doesn't overlap with logo */
+        }
+
+        /* Styling for school sections */
+        .company .dates {
+        margin-left: 25px; /* Ensures text doesn't overlap with logo */
+        }
+
+        /* Styling for school headings and subheadings */
+        .education-section h3 {
+            margin-top: 0; /* Remove default margin for consistency */
+        }
+
+        /* Styling for company name within education sections */
+        .education-section .school-name {
+            font-weight: bold;
+        }
+
+        /* Styling for dates within job sections */
+        .education-section .dates {
+            font-style: italic;
+            margin-top: 5px; /* Adjust as needed */
+        }
+
+        /* Styling for responsibilities within job sections */ 
+        .education-section .certificate {
+            list-style-type: disc; /* Change list style as needed */
+            margin-top: 5px; /* Adjust as needed */
+        }
+
+        /* Styling for list items within job responsibilities */
+        .education-section .certificate li {
+            margin-bottom: 5px; /* Adjust as needed */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Alex B. Conrad</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <img src="headshot.jpg" alt="Your Image">
+                <p style="font-size: 20px;">I have recently completed my undergraduate studies at the University of Iowa's Tippie College of Business, achieving a double major in Accounting and Business Analytics & Information Systems, complemented by a certificate in Sustainability. Presently, I am actively engaged in pursuing my Certified Public Accountant (CPA) qualification whilst embarking on a career trajectory in public accounting, specializing in IT audit. My professional aspirations center around the seamless integration of technology and accounting principles to optimize accuracy, efficiency, and security within financial systems, while concurrently championing sustainable business.
+            </div>
+        </section>
+        <section id="experience">
+            <h2>Experience</h2>
+            <div class="job">
+                <img src="ey_logo.jpg" alt="EY Logo">
+                <div class="company">
+                    <p><strong style="font-size: 20px;">Ernst & Young (EY), Des Moines, IA</strong></p>
+                    <h3>FSO Technology Risk Intern</h3>
+                    <p class="dates">June 2023 - July 2023</p>
+                    <ul class="responsibilities">
+                        <li>Assessed and evaluated the design and implementation of IT controls to ensure compliance with industry regulations and standards.</li>
+                        <li>Documented comprehensive IT audit walkthroughs to ensure control designs are effective.</li>
+                        <li>Collaborated effectively with clients to gather crucial information contributing to the successful completion of audit projects.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="job">
+                <img src="bergan_logo.jpg" alt="BerganKDV Logo">
+                <div class="company">
+                    <p><strong style="font-size: 20px;">BerganKDV, Coralville, IA</strong></p>
+                    <h3>Tax Intern</h3>
+                    <p class="dates">January 2023 - April 2023</p>
+                    <ul class="responsibilities">
+                        <li>Prepared various tax forms, developing proficiency in tax software and tools, and contributing to efficient and accurate tax preparation processes for a diverse client base.</li>
+                        <li>Completed 60+ tax returns, including Corps, S-Corps, Partnerships, and Personal, demonstrating comprehensive knowledge of tax regulations and accounting principles.</li>
+                        <li>Communicated effectively with clients to gather necessary tax information, provide updates on return status, and answer any questions or concerns, developing strong client relationships and fostering trust.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="job">
+                <img src="adp_logo.jpg" alt="ADP Logo">
+                <div class="company">
+                    <p><strong style="font-size: 20px;">Automatic Data Processing (ADP), Elk Grove, IL</strong></p>
+                    <h3 style="margin-left: 25px;">Production Representative</h3>
+                    <p class="dates">December 2020 - January 2022</p>
+                    <ul class="responsibilities">
+                        <li>Oversaw the packaging and shipping process of thousands of 1099's, pay-checks, and W2's to ensure they were delivered to the appropriate recipients in a timely and efficient manner.</li>
+                        <li>Trained and mentored 10 new employees regarding operation procedures to ensure a smooth onboarding process.</li>
+                        <li>Utilized Agile Scrum software to confirm the completion of daily and quarterly tasks.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="education">
+            <h2>Education</h2>
+            <div class="education-section">
+                <img src="iowa_logo.jpg" alt="University Logo">
+                <div class="school">
+                    <p><strong style="font-size: 20px;">The University of Iowa Tippie College of Business, Iowa City, IA</strong></p>
+                    <p style="font-size: 18px; text-decoration: underline;">BBA, Accounting and Business Analytics & Information Systems</p>
+                    <p class="dates">August 2020 - May 2024</p>
+                    <ul class="certificate">
+                        <li>Certificate in Sustainability</li>
+                        <li>GPA: 3.91/4.00</li>
+                        <li>Graduated with Distinction</li>
+                        <li>University of Iowa Dean's List: Fall 2020 - Spring 2024</li>
+                        <li>150+ Credits - CPA Eligible</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>Microsoft Office (Excel, Word, PowerPoint, Access)</li>
+                <li>Microsoft Azure (SQL Databases, Databricks, AI Services, Compute, Entra ID)</li>
+                <li>Programming Languages (Python, R, Pyspark)</li>
+                <li>Database Systems (Oracle, MySQL, Microsoft SQL Server)</li>
+                <li>Tax Software (CCH Axcess)</li>
+                <!-- Add more skills as needed -->
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Email: <a href="mailto:alexconrad621@gmail.com">alexconrad621@gmail.com</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/alex-conrad34">linkedin.com/in/alex-conrad
+
+            <!-- Add other contact details if needed -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Alex B. Conrad</p>
+    </footer>
+</body>
+</html>
